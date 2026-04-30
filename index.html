@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Sicily - Hawthorn Legend</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            background: linear-gradient(135deg, #5a2a83, #7b4397);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #5a2a83;
+            border-bottom: 3px solid #7b4397;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .stat-card {
+            background: #f0f4f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #5a2a83;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #5a2a83;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: #5a2a83;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .timeline-item {
+            padding: 1rem 2.5rem;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border: 4px solid #5a2a83;
+            top: 18px;
+            right: -8px;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(even)::after {
+            left: -8px;
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: #5a2a83;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-content {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 3rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #5a2a83;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #7b4397;
+        }
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 30px;
+                padding-right: 10px;
+            }
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-item::after,
+            .timeline-item:nth-child(even)::after {
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>James Sicily</h1>
+        <p>Hawthorn Football Club Captain & AFL Legend</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>About James Sicily</h2>
+            <p>
+                James Sicily is one of the AFL's premier defenders and the respected captain of the Hawthorn Football Club.
+                Born on January 6, 1995, Sicily has established himself as an elite intercept defender known for his
+                exceptional decision-making, piercing kicks, and inspirational leadership.
+            </p>
+            <p>
+                Standing at 188cm, Sicily combines physical presence with exceptional football intelligence,
+                making him one of the most valuable players in the competition.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Career Statistics & Achievements</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value">185+</span>
+                    <span class="stat-label">AFL Games</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">76</span>
+                    <span class="stat-label">Goals</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">20.3</span>
+                    <span class="stat-label">Avg. Disposals</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">7.1</span>
+                    <span class="stat-label">Avg. Marks</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">1.5</span>
+                    <span class="stat-label">Avg. Tackles</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">52</span>
+                    <span class="stat-label">Brownlow Votes</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Peter Crimmins Medal</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">1</span>
+                    <span class="stat-label">All Australian</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Career Highlights</h2>
+            <div class="highlight">
+                <h3>2023 - Maiden All Australian Selection</h3>
+                <p>In his first year as Hawthorn captain, Sicily earned his first All Australian blazer, 
+                topping the AFL charts with 9.9 marks per game and 26.4 disposals per game - both career and team highs.</p>
+            </div>
+            
+            <div class="highlight">
+                <h3>2022 - Peter Crimmins Medal Winner</h3>
+                <p>Awarded Hawthorn's best and fairest player, recognizing his consistent excellence 
+                throughout the season as a defensive stalwart and emerging leader.</p>
+            </div>
+            
+            <div class="highlight">
+                <h3>Leadership & Captaincy</h3>
+                <p>Appointed Hawthorn captain, Sicily leads the Moorditj Kuda leadership group, 
+                embodying the club's values and guiding the next generation of Hawks players.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Notable Performances</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Round 11, 2023</div>
+                    <div class="timeline-content">
+                        <h3>43 Disposal Masterclass</h3>
+                        <p>Against St Kilda at Marvel Stadium, Sicily accumulated an astonishing 43 disposals, 
+                        21 of which were intercepts, earning him MVP honors and showcasing his elite 
+                        ball-winning ability.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Round 21, 2023</div>
+                    <div class="timeline-content">
+                        <h3>Aerial Dominance vs Collingwood</h3>
+                        <p>Sicily's colossal defensive performance against the Pies earned him Round 21 MVP, 
+                        highlighting his exceptional marking ability and intercept prowess.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Round 23, 2022</div>
+                    <div class="timeline-content">
+                        <h3>Western Bulldogs Victory</h3>
+                        <p>Sicily contributed 33 disposals (28 kicks, 5 handballs) and 17 marks in a 
+                        23-point win over the Western Bulldogs, demonstrating his all-around impact.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Round 3, 2023</div>
+                    <div class="timeline-content">
+                        <h3>Season Opener vs Essendon</h3>
+                        <p>Despite a tough loss, Sicily started the season strongly with 30 disposals 
+                        (22 kicks, 8 handballs) and 15 marks, setting the tone for his captaincy year.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Why James Sicily is Special</h2>
+            <p>
+                What sets James Sicily apart is not just his elite statistics, but his impact on and off the field:
+            </p>
+            <ul>
+                <li><strong>Elite Defender:</strong> Consistently ranks among the league's best in intercept possessions, 
+                    marks, and defensive pressure.</li>
+                <li><strong>Exquisite Kicker:</strong> His piercing kicks often tear through opposition defences, 
+                    creating scoring opportunities from seemingly impossible situations.</li>
+                <li><strong>Leadership:</strong> As captain, he leads by example, embodying Hawthorn's values 
+                    and guiding the team through adversity.</li>
+                <li><strong>Consistency:</strong> Year after year, Sicily delivers elite performances, 
+                    rarely having an off game and constantly improving his craft.</li>
+                <li><strong>Respect:</strong> Highly regarded by teammates, opponents, and fans alike for 
+                    his professionalism, skill, and sportsmanship.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 James Sicily Tribute | Hawthorn Football Club Legend</p>
+        <p>Data sourced from AFL.com.au, HawthornFC.com.au, and Footywire.com</p>
+    </footer>
+</body>
+</html>
